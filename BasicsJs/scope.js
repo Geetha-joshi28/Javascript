@@ -1,5 +1,3 @@
-// destructures // spread and rest operators
-
 // Global scope variable can be access from any where
 // var functional scope
 // let / const--> block scope

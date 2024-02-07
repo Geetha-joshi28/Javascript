@@ -1,3 +1,24 @@
+// -------- 17/01/24 -----------
+
+/* 
+// sync,async
+// how to take only specific properties  from objects
+// how to take only specific items in plate from arrays
+// how may methods are in array to achieve immutable
+
+let plate=[1,2,3,4,5]
+plate.splice(2,1)
+plate[2] // 3
+let plate2=[...plate]
+plate.slice(2,1) / / [ ]
+
+
+
+
+*/
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------
+
 // JAVASCRIPT , typescript , ECMA SCRIPT , HOW JS PROGRAM EXECUTE
 
 // JS-> is a dynamic progrmainig language
@@ -86,6 +107,23 @@ let a1=2;
 let b1=3;
 let result=abc
 result()
+
+
+/* -------------------    destrucure   --------------------------------------------- */
+
+// hint: think of destructure
+function show({info:name, id:age}){
+  // let {info:name, id:age} = a;
+
+  console.log(name,age) // arjun , 12
+}
+
+show({info:"arjun",id:12})
+
+
+
+
+
 
 
 

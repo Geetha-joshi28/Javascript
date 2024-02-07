@@ -1,8 +1,8 @@
 function add() {
-    return {
-        name: 'geetha',
-        address: 'skjgafskjhkl',
-    };
+  return {
+    name: "geetha",
+    address: "skjgafskjhkl",
+  };
 }
 class1(); //{name:}
 
@@ -10,22 +10,22 @@ let data = [];
 
 data;
 
-let name = 'geetha';
+let name = "geetha";
 
 function add1() {
-    let user = [
-        {},
-        '',
-        12,
-        true,
-        null,
-        function () {},
-        undefined,
-        () => {
-            return [];
-        },
-    ];
-    return user[0];
+  let user = [
+    {},
+    "",
+    12,
+    true,
+    null,
+    function () {},
+    undefined,
+    () => {
+      return [];
+    },
+  ];
+  return user[0];
 }
 
 let user = [5, 6, 7]; //
@@ -35,11 +35,11 @@ user[2]; // 3
 console.log(add1); //
 
 let add = () => {
-    console.log('test');
-    let fn = () => {
-        return {};
-    };
-    return fn;
+  console.log("test");
+  let fn = () => {
+    return {};
+  };
+  return fn;
 };
 
 let result = add(); //
@@ -49,25 +49,25 @@ console.log(result()); // {}
 //
 
 let data4 = {
-    name: 'getha',
-    mob: 1321,
-    home: '',
-    hobies: [1, 2, 3],
+  name: "getha",
+  mob: 1321,
+  home: "",
+  hobies: [1, 2, 3],
 };
 
 let a = 10;
 console.log(a); //
 
 function abc(a = 5, b = 6) {
-    let obj = {
-        add: (a, b) => {
-            return a + b;
-        },
-        sub: (a, b) => a - b,
-        div: a / b,
-        mul: a * b,
-    };
-    return obj;
+  let obj = {
+    add: (a, b) => {
+      return a + b;
+    },
+    sub: (a, b) => a - b,
+    div: a / b,
+    mul: a * b,
+  };
+  return obj;
 }
 
 const result1 = abc();
@@ -82,8 +82,8 @@ let d = 3;
 
 // resulable funciton
 function nonveg(cfn) {
-    let result = cfn(c, d);
-    return result;
+  let result = cfn(c, d);
+  return result;
 }
 
 nonveg(subcfn); //-1

@@ -49,35 +49,183 @@ console.log(user[objName]);
 console.log(user.name);
 console.log(user["name"]);
 
-let data = [
-  1,
-  2,
-  3,
-  function (name) {
-    console.log(name);
-  },
-];
-let market = [
-  1,
-  2,
-  3,
-  function (name) {
-    console.log(name);
-  },
-];
+// -----------------------------  object examples -------------------------------------------------
 
-data[0];
-// array like objects
-// {
-//   0: 1,
-//   1: 2,
-//     2: 3,
-//     3: () => { }
-//     lenght:4
+let a = [10];
+let b = [];
 
+// string,number,boolean,[],{},functions,
+let car = {
+  name: "value",
+  age: 12,
+  moblie: "samsung",
+  users: [
+    {
+      id: 12,
+      role: "developer",
+    },
+    {
+      id: 13,
+      role: "tester",
+    },
+    () => {
+      return "arjun";
+    },
+    {
+      id: 14,
+      role: "tester",
+    },
+  ],
+
+  vegetables: {
+    fruits: ["watermelon", "grapes", "banana"],
+    sub: () => {
+      return 5 + 6;
+    },
+  },
+
+  show: function () {
+    return function () {};
+  },
+};
+car.users[2]();
+car.vegetables.fruits[2];
+car.vegetables.sub();
+car.show;
+car.show();
+let func = car.show(); // () => {};
+func(); // undefiend
+car.users[0].role; //
+
+car.users[2].id; //
+console.log(car.vegetables);
+
+console.log(car.vegetables.fruits);
+console.log(car.vegetables.fruits[1]);
+
+car.show(); //
+
+car.show; //
+
+/* -------- start ------- practice all object methods ------------------- */
+
+let user = { name: " arjun" };
+
+user.name = "geetha";
+
+user.mobile = 123124;
+
+let data = user;
+delete user.mobile;
+data.mobile = 3242234;
+data.do = "hate";
+
+// data-- > user-- > {}
+
+console.log(user); //{ name: " geetha",mobile:3242,do:'hate' }
+
+console.log(data); //{ name: " geetha",mobile:3242,do:'hate' }
+
+let add = {
+  name: "geetha",
+  show: () => {
+    return null;
+  },
+};
+
+function Add() {
+  // this = {}
+
+  this.name = "geetha";
+  this.show = () => {
+    return null;
+  };
+
+  // return this
+}
+
+let result = new Add(); // {name:'geetha', show: ()=>{}}
+
+//  java script its own Object
+
+// function Object() {
+// this = {}
+
+// return this
 // }
 
-data.push(4);
+// let Object = new Object() // {}
 
-user.hi("geetha");
-user.hi("arjun");
+let user = {
+  name: "geetha",
+  show: () => {
+    return null;
+  },
+};
+
+// object methods
+
+// keys -- return array of keys of given object // [ "name", 'show' ]
+// values - return array of values of given object //
+// entries -- return array of array key values of given object
+
+let data = {
+  veg: ["tomato"],
+  nonveg: function (name) {
+    return "seeth";
+  },
+};
+
+data.nonveg("geetha"); //
+
+// Object.keys()
+// let Object = {
+
+//   keys: (obj) => { return [""] },
+//   values: (obj) =>{ return [] }
+// }
+
+// Object.values(user)  / []
+// Object.keys(user) // [""]
+
+Object.keys(user); // ["name","show"]
+
+Object.values(data); // [ ["tomato"], fun ]
+
+let mydata = Object.values(data)[1](); // []
+
+// [string][]
+
+// [string,T][]  // [[key,value],[key,value]]
+
+let user = [{ user: [{ child: [{ grandchild: ["geetha", "arjun"] }] }] }];
+
+user.flat(); // [12,2,4]
+
+let result1 = Object.entries(data); // [ [veg, ["tomato"]]  , [ nonveg ,fn ]  ]
+
+result1 = [
+  [veg, ["tomato"]],
+  [nonveg, fn],
+];
+
+result1[0]; // [ veg, ["tomato"] ]
+
+let man = result1[1]; // [ nonveg ,fn ]
+
+let myfun = man[1]; // ()=>{ }
+
+myfun();
+
+/* ---------------------- end   ---------------------------------- */
+const user = {
+  username: geetha,
+  age: 25,
+  location: "bangalore",
+};
+
+function User1(a, b, c) {
+  this.a = a;
+  this.b = b;
+  this.c = c;
+}
