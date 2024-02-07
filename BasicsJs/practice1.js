@@ -1,11 +1,10 @@
-console.log(user);
-
-var user = {};
+let age = 220;
 
 function add() {
-  // var age= undefiend
+  // var age=undefien
+  let age = 25;
 
-  if (false) {
+  if (true) {
     let age = 23;
     console.log(age); //23
     let name = "geetha";
@@ -15,12 +14,21 @@ function add() {
   }
 
   console.log(age);
+  console.log(age);
 }
 
-add();
+function sub() {
+  return [1, 2, 3];
+}
 
-for (let i = 0; index < 4; i++) {
+console.log(age);
+add();
+sub();
+
+for (let i = 0; index <= 3; i++) {
   setTimeout(() => {
     console.log(i);
   }, 1000);
 }
+
+0, 1, 2, 3;
